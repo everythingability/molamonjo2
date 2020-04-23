@@ -1,0 +1,33 @@
+{% extends "_base.html" %}
+{% block content %}
+
+
+  <h2>Rap Dashboard</h2>
+
+  <div class="card flex-row flex-wrap">
+    {% for hecategory in hecategories %}
+
+      <div class="card" style="width: 20rem;">
+        <h3> {{hecategory.name}} </h3>
+
+            <div class="card-body">
+             
+              {%for heresearcharea in hecategory.researchareas%}
+                  <p class="card-text">
+                      <a href="/rap/heresearcharea/{{heresearcharea.id}}">{{heresearcharea.name}}</a>
+                      {{heresearcharea.myprojects_count}}
+                      <br>
+                  </p>
+               {% endfor%}
+            </div> 
+
+        </div>
+   {%endfor%}
+</div>
+
+<hr>
+
+ 
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "_base.html" %}
+{% block content %}
+
+<div>
+  
+  <p>
+ 
+  {% for tag in tags %}
+   <h3>{{tag.name}}<h3>
+    {{tag.tool_count}}
+   <hr>
+   
+  
+  {%endfor%}
+ 
+  </p>
+</div>
+
+{% endblock %}

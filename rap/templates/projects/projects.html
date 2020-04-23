@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+{% block content %}
+
+<div>
+  
+  <p>
+  <div class="card flex-row flex-wrap">
+
+  {% for project in projects %}
+   <div class="card" style="width: 13rem;">
+   <a href="{{project.url}}" target="_blank">
+     
+      </a>
+  <div class="card-body">
+          <p class="card-text">
+  <b><a href="/rap/project/{{project.id}}">{{project.title|safe}}</a></b>
+
+  {{tool.text}}
+
+  <br>
+ 
+ 
+  </p>
+       </div>
+    </div>
+  {%endfor%}
+ </div>
+  </p>
+</div>
+
+{% endblock %}

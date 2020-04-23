@@ -1,0 +1,78 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<ul class="navbar-nav">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li> 
+
+ {% if request.user.is_staff %}
+       <li class="nav-item">
+        <a class="nav-link" href="/rap/">Dashboard</a>
+      </li> 
+{%endif%}
+
+       <li class="nav-item">
+        <a class="nav-link" href="/admin/">Admin</a>
+
+      </li> 
+
+       {% if request.user.is_staff %}
+       <li class="nav-item">
+        <a class="nav-link" href="/logout/">sign out</a>
+      </li> 
+{%endif%}
+
+        <!--
+        <li class="nav-item">
+        <a class="nav-link" href="/rap/projects">Projects</a>
+      </li> -->
+
+</nav>
+
+{%comment%}
+<style>
+.hello-msg, hello-msg a{
+    font-size:18px;
+    color: #fff;
+    margin-right: 20px;
+}
+#messages{
+			background-color: grey;
+			color: #fff;
+			padding: 10px;
+			margin-top: 10px;
+		}
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <img src="{% static 'images/logo.png' %}" width="48">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+
+      
+
+     
+    </ul>
+  </div>
+  
+  <span class="hello-msg"> Hello {{request.user}}</span>
+
+   {% if request.user.is_staff %}
+         <span> <a class="hello-msg nav-link" 
+  href="{% url 'products' %}">Admin Dashboard</a>
+        </span>
+      {%endif%}
+
+  <span> <a class="hello-msg nav-link" 
+  href="{% url 'user-profile' %}">Profile</a></span>
+
+  <span class="hello-msg"><a href="/accounts/logout">Logout</a>
+</nav>
+{%endcomment%}

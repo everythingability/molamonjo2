@@ -1,0 +1,28 @@
+{% extends "_base.html" %}
+
+{% block title %}Edit Tool!{% endblock %}
+
+
+{% block content %}
+
+<div class="row">
+<div class="col-md-10">
+<br><br>
+
+<h3>{{heresearcharea.name}}</h3>
+<b>gtr:</b>{%for gtr in heresearcharea.gtrs.all%}
+{{gtr.name}}, 
+{%endfor%}<br>
+
+<b>tags:</b>{%for socialtag in heresearcharea.socialtags.all%}
+{{socialtag.name}}, 
+{%endfor%}<br><br>
+
+{%for project in projects%}
+<p><a href="{{project.GTRProjectUrl}}" target="_blank">{{project.title}}</a></p>
+
+{%endfor%}
+
+</div>
+</div>
+{% endblock  %}

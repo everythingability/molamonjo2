@@ -1,0 +1,49 @@
+
+{% extends "_base.html" %}
+
+{% block title %}Create Tool!{% endblock %}
+
+{% block content %}
+
+<form method="POST" action="/tools/create">
+ {{ form.csrf_token }}
+{{form.hidden_tag()}} 
+
+<div class="form-group">
+        <label>{{ form.name.label }}</label> {{ form.name(class="css_class") }}
+</div>
+{% if form.name.errors %}
+        <ul class="errors alert alert-danger">{% for error in form.url.errors %}<li>{{ error }}</li>
+        {% endfor %}</ul>
+{% endif %}
+
+<div class="form-group">
+    {{ form.url.label }}
+    {{ form.url() }}
+</div>
+{% if form.url.errors %}
+        <ul class="errors alert alert-danger">{% for error in form.url.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+
+<div class="form-group">
+
+    {{ form.image_url.label }}
+     {{ form.image_url() }}
+</div>
+{% if form.image_url.errors %}
+        <ul class="errors alert alert-danger">{% for error in form.image_url.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+
+<div class="form-group">
+    {{ form.text.label }}
+     {{ form.text() }}
+</div>
+
+        <div>
+        <br>
+ {{ form.submit }}
+        </div>
+
+</form>
+
+{% endblock content %}
