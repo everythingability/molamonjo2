@@ -1,4 +1,4 @@
-import requests, json
+'''import requests, json
 import pandas as pd
 import sqlite3
 
@@ -23,5 +23,6 @@ def jread(fname):
     j = json.loads(d)
     f.close()
     return j
+    '''
 
 
