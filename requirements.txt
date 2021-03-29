@@ -86,7 +86,7 @@ pyaes==1.6.1
 pycountry==19.8.18
 pycparser==2.19
 pycryptodome==3.9.2
-Pygments==2.3.1
+Pygments==2.7.4
 pylint==2.4.4
 PyMySQL==0.9.3
 pyOpenSSL==19.0.0
