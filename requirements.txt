@@ -53,7 +53,7 @@ keyring==19.2.0
 lazy-object-proxy==1.4.3
 librosa==0.7.1
 llvmlite==0.30.0
-lxml==4.4.1
+lxml==4.6.3
 Markdown==3.1.1
 MarkupSafe==1.1.1
 mccabe==0.6.1
