@@ -74,7 +74,7 @@ pdfminer.six==20181108
 phylactery==0.2.2
 piecemaker==0.3.0
 Pillow==6.2.0
-pipenv==2018.11.26
+pipenv==2022.1.8
 pixsaw==0.2.0
 poyo==0.5.0
 proglog==0.1.9
